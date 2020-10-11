@@ -4,8 +4,9 @@
     <div class="col">
       <h1><%= @post.title %></h1>
       <p><%= @post.text %></p>
-      <%= link_to "edit", edit_post_path(@post), class: "btn btn-success"%>
-      <%= link_to "back", root_path, class: "btn btn-primary" %><br>
+      <%= link_to "edit", edit_post_path(@post), class: "btn btn-success"%><br>
+      <%= link_to "comments", comments_path(@post), class: "btn btn-primary" %><br>
+      <%= link_to "back", root_path, class: "btn btn-secondary" %><br>
     </div>
   </div>
 </div>

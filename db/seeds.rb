@@ -14,3 +14,17 @@
     text: text
   )
 end
+
+User.create!(
+  email: '1@1',
+  password: '111111'
+)
+
+50.times do |n|
+  content = Faker::Address.street_name
+  Comment.create!(
+    user_id: '1',
+    post_id: rand(1..20),
+    content: content
+  )
+end
