@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do |n|
+  title = Faker::Games::Pokemon.name
+  text = Faker::Quote.famous_last_words
+  Post.create!(
+    title: title,
+    text: text
+  )
+end
