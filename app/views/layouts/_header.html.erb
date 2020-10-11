@@ -1,0 +1,31 @@
+<header class="blog-header py-3" style="background-color: #eae6e4;">
+  <div class="container">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <%= link_to 'Rails-Articles', root_path, class: "text-muted" %>
+      </div>
+      <div class="col-8 d-flex justify-content-end align-items-center">
+        <% if user_signed_in? %>
+          <%#= link_to 'my_page', user_path(current_user), class: 'btn btn-sm btn-secondary' %>
+          <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-secondary' %>
+        <% else %>
+          <%= link_to 'SIGN UP', new_user_registration_path, class: 'btn btn-sm btn-secondary' %>
+          <%= link_to 'LOGIN', new_user_session_path, class: 'btn btn-sm btn-outline-secondary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scroller py-1 mb-2" style="background-color: #eae6e4;">
+  <div class="container">
+    <nav class="navbar">
+      <form class="form-inline">
+      </form>
+      <div class="justify-content-end">
+        <%= link_to 'Show Posts', posts_path, class: "p-2 text-muted justify-content-end" %>
+        <%= link_to 'New Post', new_post_path, class: "p-2 text-muted justify-content-end" %>
+      </div>
+    </nav>
+  </div>
+</div>
