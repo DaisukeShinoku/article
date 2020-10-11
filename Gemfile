@@ -43,7 +43,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'shoulda-matchers'
   gem 'pry-rails'
+  # テストデータベースを綺麗にしたい
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -72,3 +75,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+gem 'faker'
