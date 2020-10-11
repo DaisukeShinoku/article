@@ -11,7 +11,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card_title"><%= post.title %></h5>
-            <p class="card-text"><%= post.text %></p>
+            <p class="card-text"><%= post.text.truncate(100) %></p>
             <%= link_to "show", post_path(post), class: "btn btn-primary" %>
           </div>
         </div>
