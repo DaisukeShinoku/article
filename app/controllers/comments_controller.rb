@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   def index
     @post = Post.find(params[:id])
-    @comments = Comment.where(post_id: @post.id).all
+    @comments = Comment.where(post_id: @post.id)
   end
 
   def new
